@@ -1,4 +1,4 @@
-# compras
+# SuperMarket
 
 A new Flutter project.
 

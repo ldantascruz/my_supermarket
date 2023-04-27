@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "569268213088",
+    "project_id": "supermarket-person",
+    "storage_bucket": "supermarket-person.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:569268213088:android:bd5acd3d88a7554161ba05",
+        "android_client_info": {
+          "package_name": "br.com.lcsoftware.compras.compras"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "569268213088-enbj4bjjp2bcl6l67n8t5ct4respt7qq.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAJXCtFA3nlG73lAFq8-WrjC4nfMHZ2e1M"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "569268213088-enbj4bjjp2bcl6l67n8t5ct4respt7qq.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
