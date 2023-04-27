@@ -7,11 +7,12 @@ import 'package:flutter_modular/flutter_modular.dart';
 import 'common/constants/routes.dart';
 import 'features/home/home_page.dart';
 import 'features/sign_in/sign_in_page.dart';
+import 'features/sign_up/sign_up_bloc.dart';
 import 'features/sign_up/sign_up_page.dart';
 import 'features/splash/splash_page.dart';
 import 'services/firebase_auth_service.dart';
 
-class AppModule extends Module { 
+class AppModule extends Module {
   @override
   List<Bind> get binds => [
         Bind.factory<AuthService>(
@@ -26,7 +27,13 @@ class AppModule extends Module {
           (i) => SignInBloc(
             authService: i.get<AuthService>(),
             secureStorage: const SecureStorage(),
-            
+            graphqlService: i.get<GraphqlService>(),
+          ),
+        ),
+        Bind.factory<SignUpBloc>(
+          (i) => SignUpBloc(
+            authService: i.get<AuthService>(),
+            secureStorage: const SecureStorage(),
           ),
         ),
       ];
@@ -36,22 +43,24 @@ class AppModule extends Module {
         ChildRoute(
           NamedRoutes.initial,
           child: (context, args) => const SplashPage(),
-          transition: TransitionType.fadeIn,
+          transition: TransitionType.downToUp,
         ),
         ChildRoute(
           NamedRoutes.home,
           child: (context, args) => const HomePage(),
-          transition: TransitionType.fadeIn,
+          transition: TransitionType.downToUp,
         ),
         ChildRoute(
           NamedRoutes.signIn,
           child: (context, args) => const SignInPage(),
           transition: TransitionType.fadeIn,
+          duration: const Duration(milliseconds: 500),
         ),
         ChildRoute(
           NamedRoutes.signUp,
           child: (context, args) => const SignUpPage(),
           transition: TransitionType.fadeIn,
+          duration: const Duration(milliseconds: 500),
         ),
       ];
 }
