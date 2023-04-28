@@ -1,6 +1,8 @@
 # SuperMarket
 
-A new Flutter project.
+Um novo conceito de projeto!
+Um projeto que irá revolucionar o conceito de "Lista de compras".
+Planeje sua ida ao mercado, coloque os preços dos alimentos e tenha o valor quee precisará antes mesmo de chegar ao caixa.
 
 ## Getting Started
 
