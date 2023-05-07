@@ -21,7 +21,8 @@ class SignInBloc extends Bloc<SignInEvent, SignInState> {
     required this.graphqlService,
   }) : super(SignInStateInitial()) {
     on<SignInSubmitted>(_signIn);
-    on<SignInJumpToPage>(_jumpToPage);
+    on<SignInJumpToPageSignUp>(_jumpToPageSignUp);
+    on<SignInJumpToPageHome>(_jumpToPageHome);
   }
 
   Future<void> _signIn(SignInEvent event, Emitter emitter) async {
@@ -32,9 +33,15 @@ class SignInBloc extends Bloc<SignInEvent, SignInState> {
     } catch (e) {}
   }
 
-  Future<void> _jumpToPage(SignInEvent event, Emitter emitter) async {
+  Future<void> _jumpToPageSignUp(SignInEvent event, Emitter emitter) async {
     Future.delayed(const Duration(milliseconds: 500)).then(
       (_) => Modular.to.pushNamed(NamedRoutes.signUp),
+    );
+  }
+
+  Future<void> _jumpToPageHome(SignInEvent event, Emitter emitter) async {
+    Future.delayed(const Duration(milliseconds: 500)).then(
+      (_) => Modular.to.pushNamed(NamedRoutes.home),
     );
   }
 }

@@ -35,10 +35,18 @@ class SingInPasswoedChanged extends SignInEvent {
 
 class SignInSubmitted extends SignInEvent {}
 
-class SignInJumpToPage extends SignInEvent {
+class SignInJumpToPageSignUp extends SignInEvent {
   Future<void> jumpToPage(String pageName) async {
     Future.delayed(const Duration(seconds: 1)).then(
       (_) => Modular.to.navigate(NamedRoutes.signUp),
+    );
+  }
+}
+
+class SignInJumpToPageHome extends SignInEvent {
+  Future<void> jumpToPage(String pageName) async {
+    Future.delayed(const Duration(seconds: 1)).then(
+      (_) => Modular.to.navigate(NamedRoutes.home),
     );
   }
 }

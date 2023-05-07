@@ -133,9 +133,7 @@ class SignInPage extends StatelessWidget {
                 SizedBox(height: _sizeHeight * 0.05),
                 //button connfirm
                 ElevatedButton(
-                  onPressed: () {
-                    Modular.to.navigate(NamedRoutes.home);
-                  },
+                  onPressed: () => controller.add(SignInJumpToPageHome()),
                   style: ElevatedButton.styleFrom(
                     shadowColor: AppColors.black,
                     alignment: Alignment.center,
@@ -156,7 +154,7 @@ class SignInPage extends StatelessWidget {
                 SizedBox(height: _sizeHeight * 0.05),
                 GestureDetector(
                   onLongPress: () {},
-                  onTap: () => controller.add(SignInJumpToPage()),
+                  onTap: () => controller.add(SignInJumpToPageSignUp()),
                   child: Container(
                     alignment: Alignment.center,
                     width: _sizeWwidth,
