@@ -15,6 +15,7 @@ class App extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Compras',
+      debugShowCheckedModeBanner: false,
       theme: ThemeData.dark(
         useMaterial3: true,
       ),

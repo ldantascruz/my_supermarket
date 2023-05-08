@@ -1,6 +1,5 @@
 // ignore_for_file: no_leading_underscores_for_local_identifiers
 
-import 'package:compras/common/constants/routes.dart';
 import 'package:compras/common/design/app_colors.dart';
 import 'package:compras/features/sign_in/sign_in_bloc.dart';
 import 'package:compras/features/sign_in/sign_in_event.dart';
